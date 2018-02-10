@@ -3,14 +3,16 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
-import {ChildComponent} from "../components/child.component";
+import {ChildOneComponent} from "../components/child-one.comopnent";
+import {ChildTwoComponent} from "../components/child-two.component";
 import {ComopnentService} from "../components/service";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ChildComponent,
+    ChildOneComponent,
+    ChildTwoComponent,
   ],
   imports: [
     BrowserModule
