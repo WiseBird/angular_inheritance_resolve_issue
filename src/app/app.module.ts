@@ -13,14 +13,14 @@ import {ComopnentService} from "../components/service";
   declarations: [
     AppComponent,
     ChildOneComponent,
-    ChildTwoComponent,
+    ChildTwoComponent
   ],
   imports: [
     BrowserModule
   ],
   providers: [
     ComopnentService,
-    {  provide: 'TypesEnum', useValue: TypesEnum.One }
+    {  provide: TypesEnum, useValue: TypesEnum.One }
   ],
   bootstrap: [AppComponent]
 })

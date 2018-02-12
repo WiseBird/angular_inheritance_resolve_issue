@@ -1,3 +1,4 @@
+import { Component, Inject } from '@angular/core';
 import {BaseComponent} from "./base.component";
 import {ComopnentService} from "./service";
 
@@ -8,9 +9,10 @@ export enum TypesEnum {
 
 export class IntermediateComponent extends BaseComponent {
   constructor(
-    protected type: TypesEnum,
-    comopnentService: ComopnentService,
+    @Inject(TypesEnum) protected type: TypesEnum,
+    @Inject(ComopnentService) comopnentService: ComopnentService
   ) {
     super(comopnentService);
+    console.log(type);
   }
 }

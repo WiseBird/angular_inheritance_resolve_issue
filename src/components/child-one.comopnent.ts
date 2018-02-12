@@ -1,3 +1,4 @@
+import {Inject} from '@angular/core';
 import {IntermediateComponent, TypesEnum} from "./intermediate.component";
 
 import {Component} from "@angular/core";
@@ -11,8 +12,9 @@ import {ComopnentService} from "./service";
 })
 export class ChildOneComponent extends IntermediateComponent {
   constructor(
+    @Inject(TypesEnum) type: TypesEnum,
     comopnentService: ComopnentService,
   ) {
-    super(TypesEnum.One, comopnentService);
+    super(type, comopnentService);
   }
 }
