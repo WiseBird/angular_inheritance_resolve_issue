@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {ChildOneComponent} from "../components/child-one.comopnent";
 import {ChildTwoComponent} from "../components/child-two.component";
+import {IntermediateComponent, TypesEnum} from "../components/intermediate.component";
 import {ComopnentService} from "../components/service";
 
 
@@ -12,12 +13,15 @@ import {ComopnentService} from "../components/service";
   declarations: [
     AppComponent,
     ChildOneComponent,
-    ChildTwoComponent,
+    ChildTwoComponent
   ],
   imports: [
     BrowserModule
   ],
-  providers: [ComopnentService],
+  providers: [
+    ComopnentService,
+    {  provide: 'TypesEnum', useValue: TypesEnum.One }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

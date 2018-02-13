@@ -1,3 +1,4 @@
+import {Inject} from '@angular/core';
 import {IntermediateComponent, TypesEnum} from "./intermediate.component";
 
 import {Component} from "@angular/core";
@@ -10,6 +11,9 @@ import {ComopnentService} from "./service";
   `,
 })
 export class ChildOneComponent extends IntermediateComponent {
+  get type() {
+    return TypesEnum.One;
+  }
   constructor(
     comopnentService: ComopnentService,
   ) {
