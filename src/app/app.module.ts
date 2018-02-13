@@ -20,7 +20,7 @@ import {ComopnentService} from "../components/service";
   ],
   providers: [
     ComopnentService,
-    {  provide: TypesEnum, useValue: TypesEnum.One }
+    {  provide: 'TypesEnum', useValue: TypesEnum.One }
   ],
   bootstrap: [AppComponent]
 })

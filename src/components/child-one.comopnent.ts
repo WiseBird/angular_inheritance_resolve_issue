@@ -11,10 +11,12 @@ import {ComopnentService} from "./service";
   `,
 })
 export class ChildOneComponent extends IntermediateComponent {
+  get type() {
+    return TypesEnum.One;
+  }
   constructor(
-    @Inject(TypesEnum) type: TypesEnum,
     comopnentService: ComopnentService,
   ) {
-    super(type, comopnentService);
+    super(TypesEnum.One, comopnentService);
   }
 }
